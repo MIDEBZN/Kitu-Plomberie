@@ -1,0 +1,60 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="footer bg-surface-light py-20 mt-20">
+  <div class="container grid grid-cols-3 gap-8">
+    <div>
+      <h3 class="logo mb-4">
+        <span class="text-primary">Kitu</span> Plomberie
+      </h3>
+      <p class="text-muted">
+        Votre expert en plomberie et débouchage à Bruxelles. Interventions rapides, efficaces et garanties.
+      </p>
+    </div>
+    
+    <div>
+      <h4 class="mb-4">Liens Rapides</h4>
+      <ul class="flex flex-col gap-2">
+        <li><a href="/" class="text-muted hover:text-primary">Accueil</a></li>
+        <li><a href="/services" class="text-muted hover:text-primary">Services</a></li>
+        <li><a href="/locations" class="text-muted hover:text-primary">Zones d'intervention</a></li>
+        <li><a href="/about" class="text-muted hover:text-primary">À Propos</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="mb-4">Contact</h4>
+      <ul class="flex flex-col gap-2 text-muted">
+        <li>📞 <a href="tel:+32400000000">04 00 00 00 00</a></li>
+        <li>✉️ contact@kitu.be</li>
+        <li>📍 Bruxelles, Belgique</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="container border-t text-center pt-8 mt-8 text-muted">
+    <p>&copy; {currentYear} Kitu Plomberie. Tous droits réservés.</p>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .border-t {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    font-family: var(--font-heading);
+    letter-spacing: -0.025em;
+  }
+
+  .hover\:text-primary:hover {
+    color: var(--primary);
+  }
+</style>

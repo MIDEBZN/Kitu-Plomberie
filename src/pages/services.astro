@@ -1,0 +1,88 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const services = [
+  {
+    icon: "🚰",
+    title: "Dépannage Plomberie",
+    description: "Intervention rapide pour toutes vos fuites d'eau, réparations de tuyauterie et problèmes de pression. Nos experts diagnostiquent et réparent avec précision.",
+    features: ["Recherche de fuite non destructive", "Réparation de tuyauterie cuivre/PVC", "Remplacement de robinetterie", "Réglage de pression"]
+  },
+  {
+    icon: "🚽",
+    title: "Débouchage Professionnel",
+    description: "Élimination de tous types de bouchons dans vos canalisations. Nous utilisons du matériel haute pression et des caméras d'inspection.",
+    features: ["Débouchage de WC et éviers", "Curage haute pression", "Inspection par caméra", "Débouchage des égouts"]
+  },
+  {
+    icon: "🚿",
+    title: "Rénovation Sanitaire",
+    description: "Transformez votre salle de bain avec nos services d'installation et de rénovation complète. Design moderne et matériaux durables.",
+    features: ["Installation de douche à l'italienne", "Pose de baignoire", "Installation de meubles vasques", "Carrelage et faïence"]
+  },
+  {
+    icon: "🔥",
+    title: "Chauffage et Chauffe-eau",
+    description: "Installation, entretien et réparation de vos systèmes de production d'eau chaude pour un confort optimal tout au long de l'année.",
+    features: ["Installation de boiler", "Détartrage de chauffe-eau", "Entretien de chaudière", "Remplacement de radiateur"]
+  }
+];
+---
+
+<Layout title="Nos Services | Kitu Plomberie" description="Découvrez nos services de plomberie et débouchage à Bruxelles. Dépannage, installation et rénovation.">
+  <section class="page-header py-20 pt-32 text-center relative overflow-hidden">
+    <div class="container relative z-10">
+      <h1 class="text-5xl mb-4">Nos <span class="text-primary">Services</span></h1>
+      <p class="text-xl text-muted max-w-2xl mx-auto">
+        Des solutions professionnelles pour tous vos besoins en plomberie, du dépannage urgent à la rénovation complète.
+      </p>
+    </div>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gradient-to-b from-primary/10 to-transparent blur-3xl -z-10"></div>
+  </section>
+
+  <section class="services-list py-20">
+    <div class="container grid grid-cols-2 gap-8">
+      {services.map((service, index) => (
+        <div class="card animate-fade-in" style={`animation-delay: ${index * 150}ms`}>
+          <div class="text-5xl mb-6">{service.icon}</div>
+          <h2 class="text-2xl mb-4">{service.title}</h2>
+          <p class="text-muted mb-6">{service.description}</p>
+          <ul class="flex flex-col gap-2">
+            {service.features.map(feature => (
+              <li class="flex items-center gap-2 text-sm">
+                <span class="text-accent">✓</span> {feature}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="cta py-20 bg-surface-light">
+    <div class="container text-center">
+      <h2 class="text-3xl mb-6">Un problème spécifique ?</h2>
+      <p class="text-muted mb-8 max-w-2xl mx-auto">
+        N'hésitez pas à nous contacter pour discuter de votre projet ou pour une demande d'intervention. Notre équipe est à votre écoute.
+      </p>
+      <a href="/contact" class="btn btn-primary">Demander un Devis</a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .text-5xl { font-size: 3rem; }
+  .text-3xl { font-size: 2rem; }
+  .text-2xl { font-size: 1.5rem; }
+  .text-xl { font-size: 1.25rem; }
+  .text-sm { font-size: 0.875rem; }
+  
+  .page-header {
+    background: radial-gradient(ellipse at top, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
+  }
+
+  @media (max-width: 768px) {
+    .grid-cols-2 { grid-template-columns: 1fr; }
+    .text-5xl { font-size: 2.5rem; }
+  }
+</style>

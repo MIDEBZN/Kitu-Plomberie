@@ -1,0 +1,68 @@
+---
+const links = [
+  { href: '/', label: 'Accueil' },
+  { href: '/services', label: 'Services' },
+  { href: '/locations', label: 'Zones d\'intervention' },
+  { href: '/about', label: 'À Propos' },
+  { href: '/contact', label: 'Contact' },
+];
+---
+
+<header class="header glass">
+  <div class="container flex justify-between items-center h-full">
+    <a href="/" class="logo">
+      <span class="text-primary">Kitu</span> Plomberie
+    </a>
+    
+    <nav class="desktop-nav">
+      <ul class="flex gap-4">
+        {links.map(link => (
+          <li>
+            <a href={link.href} class="nav-link">{link.label}</a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+
+    <div class="header-cta">
+      <a href="tel:+32400000000" class="btn btn-primary">04 00 00 00 00</a>
+    </div>
+  </div>
+</header>
+
+<style>
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 50;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    font-family: var(--font-heading);
+    letter-spacing: -0.025em;
+  }
+
+  .nav-link {
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+  }
+
+  .nav-link:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--primary);
+  }
+
+  @media (max-width: 768px) {
+    .desktop-nav {
+      display: none;
+    }
+  }
+</style>
