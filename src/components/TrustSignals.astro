@@ -1,0 +1,269 @@
+---
+---
+<section class="trust-signals-section">
+  <div class="container">
+    
+    <!-- 1. Response Time Stats -->
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-circle">28<span>min</span></div>
+        <p>Temps d'intervention moyen</p>
+      </div>
+      <div class="stat-item">
+        <div class="stat-circle">94<span>%</span></div>
+        <p>Résolution au 1er passage</p>
+      </div>
+      <div class="stat-item">
+        <div class="stat-circle">1500<span>+</span></div>
+        <p>Clients satisfaits à Bruxelles</p>
+      </div>
+      <div class="stat-item">
+        <div class="stat-circle">24/7</div>
+        <p>Disponibilité réelle</p>
+      </div>
+    </div>
+
+    <!-- 2 & 3. Review Badges & Trust Badges -->
+    <div class="badges-container mt-5">
+      <div class="review-badge">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google Logo" class="google-logo" />
+        <div class="review-info">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <strong>4.9/5</strong> basées sur <strong>128 avis</strong>
+        </div>
+      </div>
+      
+      <div class="trust-badges-list">
+        <span class="trust-pill">Agréé Cerga (Gaz)</span>
+        <span class="trust-pill">Cédicol (Mazout)</span>
+        <span class="trust-pill">VCA (Sécurité)</span>
+        <span class="trust-pill">Agréé Assurances</span>
+      </div>
+    </div>
+
+    <!-- 4. Customer Testimonials -->
+    <div class="testimonials mt-5">
+      <h2 class="text-center section-title">Ce que disent nos clients</h2>
+      <div class="testimonial-grid mt-4">
+        
+        <div class="testimonial-card">
+          <div class="testi-header">
+            <div class="testi-avatar">S</div>
+            <div class="testi-meta">
+              <strong>Sophie M.</strong>
+              <span>Ixelles</span>
+            </div>
+            <div class="testi-stars">⭐⭐⭐⭐⭐</div>
+          </div>
+          <p>"Fuite d'eau massive à 23h un dimanche. Le technicien est arrivé en 25 minutes et a tout réparé rapidement. Le prix a été annoncé avant de commencer, aucune mauvaise surprise. Je recommande à 100%."</p>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testi-header">
+            <div class="testi-avatar">J</div>
+            <div class="testi-meta">
+              <strong>Jean-Luc D.</strong>
+              <span>Uccle</span>
+            </div>
+            <div class="testi-stars">⭐⭐⭐⭐⭐</div>
+          </div>
+          <p>"Notre chaudière est tombée en panne (Erreur F22). J'ai contacté Kitu Plomberie via WhatsApp avec une photo, ils ont diagnostiqué le problème à distance et sont venus avec la bonne pièce le jour même. Service impeccable."</p>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testi-header">
+            <div class="testi-avatar">A</div>
+            <div class="testi-meta">
+              <strong>Amira K.</strong>
+              <span>Schaerbeek</span>
+            </div>
+            <div class="testi-stars">⭐⭐⭐⭐⭐</div>
+          </div>
+          <p>"J'avais un problème d'égout bouché depuis des semaines que d'autres plombiers n'arrivaient pas à régler. Kitu a utilisé une caméra et un hydrocureur. Problème résolu définitivement. Équipe très pro."</p>
+        </div>
+        
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .trust-signals-section {
+    padding: 80px 0;
+    background-color: var(--color-white);
+  }
+  
+  /* Stats */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    text-align: center;
+  }
+  
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .stat-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: white;
+    border: 4px solid var(--color-orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--color-navy);
+    margin-bottom: 15px;
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .stat-circle span {
+    font-size: 1rem;
+    margin-left: 3px;
+  }
+  
+  .stat-item p {
+    font-weight: 500;
+    color: #4a5568;
+    max-width: 150px;
+  }
+  
+  /* Badges */
+  .badges-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--color-light-gray);
+    padding: 30px;
+    border-radius: 12px;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  .review-badge {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: white;
+    padding: 15px 25px;
+    border-radius: 50px;
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .google-logo {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .stars {
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+  }
+  
+  .trust-badges-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .trust-pill {
+    background: var(--color-navy);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .trust-pill::before {
+    content: '✓';
+    color: var(--color-water-blue);
+    margin-right: 8px;
+    font-weight: bold;
+  }
+  
+  /* Testimonials */
+  .testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  
+  .testimonial-card {
+    background: white;
+    border: 1px solid #e2e8f0;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+  }
+  
+  .testimonial-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-5px);
+  }
+  
+  .testi-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .testi-avatar {
+    width: 45px;
+    height: 45px;
+    background: var(--color-water-blue);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-right: 15px;
+  }
+  
+  .testi-meta {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  
+  .testi-meta span {
+    font-size: 0.85rem;
+    color: #718096;
+  }
+  
+  .testimonial-card p {
+    font-style: italic;
+    color: #4a5568;
+    line-height: 1.7;
+  }
+  
+  .mt-4 { margin-top: 30px; }
+  .mt-5 { margin-top: 50px; }
+  .text-center { text-align: center; }
+  
+  @media (max-width: 992px) {
+    .stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+    }
+    .testimonial-grid {
+      grid-template-columns: 1fr;
+    }
+    .badges-container {
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
+</style>
