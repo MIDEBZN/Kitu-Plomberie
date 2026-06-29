@@ -1,0 +1,160 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Nos Services de Plomberie et Chauffage" description="Découvrez l'ensemble des services Kitu Plomberie : Dépannage urgence, débouchage de canalisation, entretien de chaudière et installation sanitaire à Bruxelles.">
+  <div class="page-header">
+    <div class="container">
+      <h1>Nos Services</h1>
+      <p>Une expertise complète pour tous vos besoins en plomberie et chauffage.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="services-list">
+        <!-- Service 1 -->
+        <div id="urgence" class="service-detail fade-in">
+          <div class="service-icon">⏱️</div>
+          <div class="service-text">
+            <h2>Dépannage Plomberie Urgence</h2>
+            <p>Une fuite d'eau importante ? Une canalisation rompue ? Nos techniciens interviennent <strong>24h/24 et 7j/7</strong> dans tout Bruxelles en moins de 30 minutes. Nous sécurisons votre installation pour limiter les dégâts des eaux avant de procéder à la réparation définitive.</p>
+            <ul>
+              <li>Recherche de fuite (gaz traceur, caméra thermique)</li>
+              <li>Réparation de tuyauterie percée</li>
+              <li>Remplacement de robinetterie défectueuse</li>
+              <li>Intervention rapide tarif clair</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div id="debouchage" class="service-detail fade-in">
+          <div class="service-icon">🌪️</div>
+          <div class="service-text">
+            <h2>Débouchage de Canalisations</h2>
+            <p>Un évier bouché ou des toilettes qui refoulent ? N'attendez pas que la situation empire. Nous utilisons du matériel professionnel pour un débouchage efficace et durable, sans abîmer vos canalisations.</p>
+            <ul>
+              <li>Débouchage WC et toilettes</li>
+              <li>Débouchage évier, lavabo, douche</li>
+              <li>Hydrocurage haute pression</li>
+              <li>Inspection caméra des canalisations</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div id="chaudiere" class="service-detail fade-in">
+          <div class="service-icon">🔥</div>
+          <div class="service-text">
+            <h2>Chauffage & Chaudière</h2>
+            <p>Nous sommes agréés pour l'entretien, le dépannage et l'installation de vos systèmes de chauffage. Nous travaillons avec les plus grandes marques (Vaillant, Bulex, Viessmann, Junkers) pour garantir votre confort thermique.</p>
+            <ul>
+              <li>Entretien annuel obligatoire (avec attestation)</li>
+              <li>Dépannage chaudière en panne (Erreur F22, F28...)</li>
+              <li>Remplacement et installation de nouvelle chaudière</li>
+              <li>Détartrage boiler et chauffe-eau</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Service 4 -->
+        <div id="sanitaire" class="service-detail fade-in">
+          <div class="service-icon">🚿</div>
+          <div class="service-text">
+            <h2>Installation Sanitaire</h2>
+            <p>Vous souhaitez rénover votre salle de bain ou installer de nouveaux équipements sanitaires ? Notre équipe vous accompagne de A à Z dans votre projet avec des finitions impeccables.</p>
+            <ul>
+              <li>Installation de douche à l'italienne</li>
+              <li>Pose de WC suspendu (Geberit)</li>
+              <li>Remplacement de baignoire</li>
+              <li>Raccordements machine à laver / lave-vaisselle</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-5">
+        <a href="/contact" class="btn btn-primary">Demander un Devis Gratuit</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .page-header {
+    background-color: var(--color-navy);
+    color: var(--color-white);
+    padding: 80px 0;
+    text-align: center;
+  }
+  
+  .page-header h1 {
+    color: var(--color-white);
+    font-size: 3rem;
+    margin-bottom: 15px;
+  }
+  
+  .services-list {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+  
+  .service-detail {
+    display: flex;
+    gap: 40px;
+    background: var(--color-light-gray);
+    padding: 40px;
+    border-radius: 12px;
+    border-left: 5px solid var(--color-water-blue);
+  }
+  
+  .service-icon {
+    font-size: 4rem;
+    flex-shrink: 0;
+  }
+  
+  .service-text h2 {
+    margin-bottom: 20px;
+    color: var(--color-navy);
+  }
+  
+  .service-text p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+  }
+  
+  .service-text ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+  
+  .service-text ul li {
+    position: relative;
+    padding-left: 25px;
+  }
+  
+  .service-text ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--color-orange);
+    font-weight: bold;
+  }
+  
+  .text-center { text-align: center; }
+  .mt-5 { margin-top: 50px; }
+  
+  @media (max-width: 768px) {
+    .service-detail {
+      flex-direction: column;
+      gap: 20px;
+    }
+    .service-text ul {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

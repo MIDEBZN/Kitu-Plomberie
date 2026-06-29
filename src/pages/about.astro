@@ -1,0 +1,143 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="À Propos de Kitu Plomberie | Notre Entreprise" description="Découvrez l'histoire de Kitu Plomberie. Une équipe d'experts passionnés par le métier de plombier-chauffagiste, dédiée à votre satisfaction à Bruxelles.">
+  <div class="page-header">
+    <div class="container">
+      <h1>À Propos de Nous</h1>
+      <p>La passion du travail bien fait, à votre service.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <h2>Qui sommes-nous ?</h2>
+          <p>Fondée il y a plus de 10 ans, <strong>Kitu Plomberie</strong> est née d'une volonté simple : offrir aux Bruxellois un service de plomberie et de chauffage fiable, transparent et de haute qualité.</p>
+          <p>Nous avons constaté que de trop nombreuses personnes se retrouvaient face à des factures opaques et des techniciens peu scrupuleux lors d'urgences. C'est pourquoi nous avons bâti notre entreprise sur trois piliers fondamentaux :</p>
+          
+          <ul class="values-list">
+            <li>
+              <strong>Transparence Totale</strong> : Nos prix sont annoncés à l'avance. Pas de frais cachés.
+            </li>
+            <li>
+              <strong>Expertise Technique</strong> : Nos techniciens sont régulièrement formés aux dernières technologies (pompes à chaleur, chaudières à condensation).
+            </li>
+            <li>
+              <strong>Réactivité</strong> : Une urgence plomberie ne peut pas attendre. Nous avons optimisé notre flotte pour intervenir en moins de 30 minutes.
+            </li>
+          </ul>
+        </div>
+        
+        <div class="about-stats">
+          <div class="stat-card">
+            <div class="stat-number">10+</div>
+            <div class="stat-label">Années d'expérience</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">500+</div>
+            <div class="stat-label">Interventions annuelles</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">4.9/5</div>
+            <div class="stat-label">Note moyenne Google</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Satisfaction Garantie</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="section bg-light">
+    <div class="container text-center">
+      <h2>Prêt à travailler avec nous ?</h2>
+      <p style="margin-bottom: 30px; font-size: 1.1rem;">Que ce soit pour une fuite urgente ou un projet de rénovation, notre équipe est là.</p>
+      <a href="/contact" class="btn btn-primary">Contactez-nous aujourd'hui</a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .page-header {
+    background-color: var(--color-navy);
+    color: var(--color-white);
+    padding: 80px 0;
+    text-align: center;
+  }
+  
+  .page-header h1 {
+    color: var(--color-white);
+    font-size: 3rem;
+    margin-bottom: 15px;
+  }
+  
+  .about-grid {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 60px;
+    align-items: center;
+  }
+  
+  .about-text h2 {
+    margin-bottom: 25px;
+    color: var(--color-navy);
+  }
+  
+  .about-text p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+  }
+  
+  .values-list {
+    margin-top: 30px;
+  }
+  
+  .values-list li {
+    background: var(--color-light-gray);
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border-left: 4px solid var(--color-orange);
+  }
+  
+  .about-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  
+  .stat-card {
+    background: var(--color-navy);
+    color: var(--color-white);
+    padding: 30px 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: var(--shadow-md);
+  }
+  
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    font-family: var(--font-heading);
+    color: var(--color-water-blue);
+    margin-bottom: 5px;
+  }
+  
+  .stat-label {
+    font-weight: 500;
+  }
+  
+  .bg-light { background-color: var(--color-light-gray); }
+  .text-center { text-align: center; }
+  
+  @media (max-width: 900px) {
+    .about-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

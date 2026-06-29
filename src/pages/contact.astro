@@ -1,0 +1,202 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Contactez Kitu Plomberie | Devis Gratuit" description="Besoin d'un plombier en urgence ? Contactez Kitu Plomberie via WhatsApp, téléphone ou via notre formulaire de contact pour un devis gratuit.">
+  <div class="page-header">
+    <div class="container">
+      <h1>Contactez-nous</h1>
+      <p>Une question, un devis, une urgence ? Nous sommes à votre écoute.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+        
+        <div class="contact-info-cards">
+          <div class="info-card urgent">
+            <div class="icon">🚨</div>
+            <h3>Urgence Dépannage</h3>
+            <p>Notre équipe est disponible 24/7 pour les urgences plomberie et chauffage.</p>
+            <a href="tel:+32400000000" class="btn btn-primary w-100">Appeler : 0400 00 00 00</a>
+          </div>
+          
+          <div class="info-card whatsapp">
+            <div class="icon">💬</div>
+            <h3>Message Rapide</h3>
+            <p>Envoyez-nous une photo de votre fuite sur WhatsApp pour un devis instantané.</p>
+            <a href="https://wa.me/32400000000" class="btn w-100 whatsapp-btn">WhatsApp Chat</a>
+          </div>
+          
+          <div class="info-card">
+            <div class="icon">📧</div>
+            <h3>Email</h3>
+            <p>Pour vos projets de rénovation ou demandes d'entretien annuel.</p>
+            <a href="mailto:info@kituplomberie.be" class="btn btn-outline w-100">info@kituplomberie.be</a>
+          </div>
+        </div>
+
+        <div class="contact-form-wrapper">
+          <h2>Demander un Devis Gratuit</h2>
+          <p>Remplissez le formulaire ci-dessous, nous vous répondrons sous 24h.</p>
+          
+          <form class="contact-form">
+            <div class="form-group">
+              <label for="name">Nom Complet *</label>
+              <input type="text" id="name" required placeholder="Votre nom" />
+            </div>
+            
+            <div class="form-group">
+              <label for="phone">Téléphone *</label>
+              <input type="tel" id="phone" required placeholder="04xx xx xx xx" />
+            </div>
+            
+            <div class="form-group">
+              <label for="service">Service Souhaité *</label>
+              <select id="service" required>
+                <option value="" disabled selected>Choisissez un service...</option>
+                <option value="debouchage">Débouchage canalisation</option>
+                <option value="fuite">Recherche / Réparation fuite</option>
+                <option value="chaudiere">Entretien / Dépannage chaudière</option>
+                <option value="installation">Installation sanitaire</option>
+                <option value="autre">Autre demande</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" rows="4" placeholder="Décrivez votre problème ou votre projet..."></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-secondary w-100">Envoyer ma demande</button>
+          </form>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .page-header {
+    background-color: var(--color-navy);
+    color: var(--color-white);
+    padding: 80px 0;
+    text-align: center;
+  }
+  
+  .page-header h1 {
+    color: var(--color-white);
+    font-size: 3rem;
+    margin-bottom: 15px;
+  }
+  
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 50px;
+  }
+  
+  .contact-info-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .info-card {
+    background: var(--color-light-gray);
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .info-card.urgent {
+    border: 2px solid var(--color-orange);
+    background: white;
+  }
+  
+  .info-card.whatsapp {
+    border: 2px solid #25D366;
+    background: white;
+  }
+  
+  .icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .info-card h3 {
+    margin-bottom: 10px;
+  }
+  
+  .info-card p {
+    margin-bottom: 20px;
+    color: #6c757d;
+  }
+  
+  .w-100 { width: 100%; }
+  
+  .whatsapp-btn {
+    background-color: #25D366;
+    color: white;
+  }
+  
+  .whatsapp-btn:hover {
+    background-color: #1DA851;
+  }
+  
+  .contact-form-wrapper {
+    background: var(--color-white);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-md);
+  }
+  
+  .contact-form-wrapper h2 {
+    color: var(--color-navy);
+    margin-bottom: 10px;
+  }
+  
+  .contact-form-wrapper p {
+    color: #6c757d;
+    margin-bottom: 30px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #cbd5e0;
+    border-radius: 6px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    transition: var(--transition);
+  }
+  
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-water-blue);
+    box-shadow: 0 0 0 3px rgba(27, 143, 209, 0.2);
+  }
+  
+  @media (max-width: 900px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

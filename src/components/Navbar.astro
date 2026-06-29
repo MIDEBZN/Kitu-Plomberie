@@ -1,0 +1,126 @@
+---
+---
+<header class="header">
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="contact-info">
+        <a href="tel:+32400000000">📞 +32 400 00 00 00</a>
+        <span>Dépannage Urgence 24/7 à Bruxelles</span>
+      </div>
+      <div class="trust-badge">
+        ⭐ 4.9/5 (128 Avis Google)
+      </div>
+    </div>
+  </div>
+  
+  <nav class="navbar container">
+    <a href="/" class="logo">
+      <span class="logo-text">Kitu<span class="logo-highlight">Plomberie</span></span>
+    </a>
+    
+    <ul class="nav-links">
+      <li><a href="/">Accueil</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/locations">Zones d'intervention</a></li>
+      <li><a href="/about">À Propos</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+    
+    <div class="nav-actions">
+      <a href="https://wa.me/32400000000" class="btn btn-secondary whatsapp-btn">
+        <span>Devis par WhatsApp</span>
+      </a>
+    </div>
+  </nav>
+</header>
+
+<style>
+  .header {
+    background: var(--color-white);
+    box-shadow: var(--shadow-sm);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .top-bar {
+    background: var(--color-navy);
+    color: var(--color-white);
+    padding: 8px 0;
+    font-size: 0.9rem;
+  }
+  
+  .top-bar-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .contact-info a {
+    font-weight: 600;
+    margin-right: 15px;
+  }
+  
+  .contact-info a:hover {
+    color: var(--color-orange);
+  }
+  
+  .trust-badge {
+    color: #FFD700;
+    font-weight: 600;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .logo {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--color-navy);
+  }
+  
+  .logo-highlight {
+    color: var(--color-water-blue);
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .nav-links a {
+    font-weight: 500;
+    font-family: var(--font-heading);
+  }
+  
+  .nav-links a:hover {
+    color: var(--color-orange);
+  }
+  
+  .whatsapp-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #25D366; /* WhatsApp Green */
+  }
+  
+  .whatsapp-btn:hover {
+    background-color: #1DA851;
+  }
+  
+  @media (max-width: 900px) {
+    .nav-links {
+      display: none;
+    }
+    .top-bar-inner {
+      flex-direction: column;
+      gap: 5px;
+      text-align: center;
+    }
+  }
+</style>
