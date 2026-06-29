@@ -15,6 +15,7 @@
   
   <nav class="navbar container">
     <a href="/" class="logo">
+      <img src="/logo.png" alt="Kitu Plomberie Logo" class="logo-img" />
       <span class="logo-text">Kitu<span class="logo-highlight">Plomberie</span></span>
     </a>
     
@@ -78,10 +79,18 @@
   }
   
   .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     font-family: var(--font-heading);
     font-size: 1.8rem;
     font-weight: 800;
     color: var(--color-navy);
+  }
+  
+  .logo-img {
+    height: 40px;
+    width: auto;
   }
   
   .logo-highlight {
