@@ -54,7 +54,7 @@ import TrustSignals from '../components/TrustSignals.astro';
         <div class="price-card">
           <div class="price-icon">💧</div>
           <h3>Petite Plomberie</h3>
-          <div class="price">Dès <span>89€</span></div>
+          <div class="price"><span class="des">Dès</span> <span>89€</span></div>
           <ul>
             <li>Réparation fuite simple</li>
             <li>Remplacement robinet</li>
@@ -67,7 +67,7 @@ import TrustSignals from '../components/TrustSignals.astro';
           <div class="popular-badge">Plus Demandé</div>
           <div class="price-icon">🌪️</div>
           <h3>Débouchage</h3>
-          <div class="price">Dès <span>129€</span></div>
+          <div class="price"><span class="des">Dès</span> <span>129€</span></div>
           <ul>
             <li>Évier ou Lavabo bouché</li>
             <li>Toilettes (WC) bouchées</li>
@@ -79,7 +79,7 @@ import TrustSignals from '../components/TrustSignals.astro';
         <div class="price-card">
           <div class="price-icon">🔥</div>
           <h3>Dépannage Chaudière</h3>
-          <div class="price">Dès <span>149€</span></div>
+          <div class="price"><span class="des">Dès</span> <span>149€</span></div>
           <ul>
             <li>Diagnostic de panne (ex: Erreur F22)</li>
             <li>Plus d'eau chaude</li>
@@ -240,87 +240,105 @@ import TrustSignals from '../components/TrustSignals.astro';
   .w-100 { width: 100%; }
   
   /* Pricing */
-  .bg-light { background-color: var(--color-light-gray); }
+  /* Pricing */
+  .bg-light { background-color: #f8fafc; }
   
   .pricing-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-    margin-top: 40px;
+    margin-top: 50px;
+    align-items: center;
   }
   
   .price-card {
     background: var(--color-white);
-    padding: 40px 30px;
+    padding: 50px 40px;
     border-radius: 12px;
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     text-align: center;
     position: relative;
-    transition: var(--transition);
-  }
-  
-  .price-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-lg);
+    border: 1px solid transparent;
   }
   
   .price-card.popular {
     border: 2px solid var(--color-water-blue);
-    transform: scale(1.05);
-  }
-  
-  .price-card.popular:hover {
-    transform: scale(1.05) translateY(-5px);
+    padding: 60px 40px;
   }
   
   .popular-badge {
     position: absolute;
-    top: -15px;
+    top: -14px;
     left: 50%;
     transform: translateX(-50%);
     background: var(--color-water-blue);
     color: white;
-    padding: 5px 15px;
+    padding: 6px 20px;
     border-radius: 20px;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    white-space: nowrap;
   }
   
   .price-icon {
-    font-size: 3rem;
-    margin-bottom: 20px;
+    font-size: 3.5rem;
+    margin-bottom: 25px;
+    line-height: 1;
+  }
+  
+  .price-card h3 {
+    font-size: 1.2rem;
+    color: var(--color-navy);
+    margin-bottom: 25px;
+    font-weight: 700;
   }
   
   .price {
-    font-size: 1.2rem;
-    color: #6c757d;
-    margin: 20px 0;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 35px;
+  }
+  
+  .price .des {
+    font-size: 1.1rem;
+    color: #94a3b8;
+    font-weight: 500;
   }
   
   .price span {
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 800;
     color: var(--color-navy);
+    line-height: 1;
   }
   
   .price-card ul {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     text-align: left;
   }
   
   .price-card ul li {
-    padding: 10px 0;
-    border-bottom: 1px solid #edf2f7;
+    padding: 15px 0;
+    border-bottom: 1px solid #f1f5f9;
     position: relative;
-    padding-left: 25px;
+    padding-left: 30px;
+    font-size: 0.95rem;
+    color: #475569;
+  }
+  
+  .price-card ul li:last-child {
+    border-bottom: none;
   }
   
   .price-card ul li::before {
     content: '✓';
     position: absolute;
     left: 0;
-    color: #48bb78;
+    color: #10b981; /* Green */
     font-weight: bold;
+    font-size: 1.1rem;
   }
   
   /* Services */
@@ -364,9 +382,8 @@ import TrustSignals from '../components/TrustSignals.astro';
     .hero-desc { margin: 0 auto 40px; }
     .hero-cta { justify-content: center; }
     .trust-signals { justify-content: center; }
-    .pricing-grid { grid-template-columns: 1fr; gap: 40px; }
-    .price-card.popular { transform: none; }
-    .price-card.popular:hover { transform: translateY(-5px); }
+    .pricing-grid { grid-template-columns: 1fr; gap: 40px; align-items: stretch; }
+    .price-card.popular { padding: 50px 40px; }
     .services-grid { grid-template-columns: 1fr; }
   }
   @media (max-width: 576px) {
