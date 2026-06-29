@@ -1,0 +1,150 @@
+---
+---
+<section class="global-contact-section">
+  <div class="container">
+    <div class="global-contact-wrapper">
+      <div class="contact-text">
+        <h2>Besoin d'une intervention rapide ?</h2>
+        <p>Laissez-nous vos coordonnées, notre équipe vous rappelle immédiatement pour planifier une intervention ou vous donner un devis.</p>
+        <div class="contact-badges">
+          <span>✅ Devis Rapide</span>
+          <span>✅ Sans Engagement</span>
+        </div>
+      </div>
+      
+      <div class="contact-form-container">
+        <!-- FormSubmit Integration -->
+        <form action="https://formsubmit.co/midebzn@gmail.com" method="POST" class="global-form">
+          <!-- FormSubmit Configuration -->
+          <input type="hidden" name="_subject" value="Nouvelle demande depuis le site Kitu Plomberie !">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="global-name">Nom Complet</label>
+              <input type="text" id="global-name" name="name" required placeholder="Votre nom" />
+            </div>
+            <div class="form-group">
+              <label for="global-phone">Téléphone</label>
+              <input type="tel" id="global-phone" name="phone" required placeholder="04xx xx xx xx" />
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="global-service">Type d'intervention</label>
+            <select id="global-service" name="service" required>
+              <option value="" disabled selected>Sélectionnez un service...</option>
+              <option value="Urgence Fuite">Urgence Fuite d'eau</option>
+              <option value="Débouchage">Débouchage canalisation</option>
+              <option value="Panne Chaudière">Panne de chaudière</option>
+              <option value="Entretien">Entretien chaudière</option>
+              <option value="Autre">Autre demande</option>
+            </select>
+          </div>
+          
+          <button type="submit" class="btn btn-primary w-100 submit-btn">Être rappelé gratuitement</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .global-contact-section {
+    background-color: var(--color-light-gray);
+    padding: 60px 0;
+    border-top: 1px solid #e2e8f0;
+  }
+  
+  .global-contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-md);
+  }
+  
+  .contact-text h2 {
+    color: var(--color-navy);
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  
+  .contact-text p {
+    font-size: 1.1rem;
+    color: #4a5568;
+    margin-bottom: 25px;
+  }
+  
+  .contact-badges {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .contact-badges span {
+    background: rgba(242, 100, 25, 0.1);
+    color: var(--color-orange);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+  }
+  
+  .global-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: var(--color-navy);
+    font-size: 0.9rem;
+  }
+  
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e0;
+    border-radius: 6px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+  }
+  
+  .form-group input:focus,
+  .form-group select:focus {
+    outline: none;
+    border-color: var(--color-water-blue);
+    box-shadow: 0 0 0 3px rgba(27, 143, 209, 0.2);
+  }
+  
+  .submit-btn {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    padding: 15px;
+  }
+  
+  .w-100 { width: 100%; }
+  
+  @media (max-width: 900px) {
+    .global-contact-wrapper {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
